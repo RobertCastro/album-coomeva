@@ -26,8 +26,10 @@ Route::get('/', function () {
 
 Route::group(["middleware" => ['auth:sanctum', 'verified']], function () {
 
-    Route::put("stores/{store}/restore", [StoreController::class, "restore"])->name("stores.restore");;
-    Route::resource("stores", StoreController::class);
+    Route::put("dashboard/{store}/restore", [StoreController::class, "restore"])->name("stores.restore");;
+    Route::resource("dashboard", StoreController::class);
+    Route::get('dashboard/export/', [DataController::class, 'export'])->name("dashboard.export");
+    Route::get('dashboard/affiliated/', [DataController::class, 'affiliated'])->name("dashboard.affiliated");
 
     Route::resource("users", UsersController::class);
     

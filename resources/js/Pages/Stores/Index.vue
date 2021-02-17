@@ -5,7 +5,7 @@
                 <div class="flex flex-wrap sm:flex-no-wrap items-center mb-2">
                     <div class="w-full pb-3 flex flex-col md:flex-row md:justify-between">
                         <!-- Add user button -->
-                        <inertia-link
+                        <!-- <inertia-link
                             v-if="$permissions.can([{name: 'create stores'}])"
                             class="bg-green-500 p-2 hover:bg-green-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200"
                             :href="route('stores.create')" >
@@ -14,7 +14,7 @@
                                 <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
                             </svg>
                             Add Store
-                        </inertia-link>
+                        </inertia-link> -->
                         <!-- Status -->
                         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                             <div class="relative">
@@ -109,7 +109,7 @@
             formSearch: {
                 handler: debounce(function() {
                     let query = pickBy(this.formSearch)
-                    this.$inertia.replace(this.route('stores.index', query))
+                    // this.$inertia.replace(this.route('stores.index', query))
                 }, 500),
                 deep: true,
             }
