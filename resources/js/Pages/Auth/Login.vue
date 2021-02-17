@@ -2,8 +2,8 @@
     <auth-layout>
         <template #toolbar>
             <section>
-                <h3 class="font-bold text-2xl">Welcome</h3>
-                <p class="text-gray-600 pt-2">Login to your account</p>
+                <h3 class="font-bold text-2xl">Bienvenido</h3>
+                <p class="text-gray-600 pt-2">Ingrese a su cuenta</p>
             </section>
         </template>
 
@@ -16,7 +16,7 @@
                     class="block text-gray-700 text-sm font-bold mb-2 ml-3"
                     for="email"
                 >
-                    Email
+                    Correo electrónico
                 </label>
                 <input
                     v-model="form.email"
@@ -30,7 +30,7 @@
                     class="block text-gray-700 text-sm font-bold mb-2 ml-3"
                     for="password"
                 >
-                    Password
+                    Contraseña
                 </label>
                 <input
                     v-model="form.password"
@@ -45,20 +45,20 @@
                     :href="route('password.request')"
                     class="text-sm text-purple-600 hover:text-purple-700 hover:underline mb-6"
                 >
-                    have you forgotten your password?
+                    ¿Has olvidado tu contraseña?
                 </inertia-link>
             </div>
             <button
                 class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200"
                 type="submit"
             >
-                Log in
+                Iniciar Sesión
             </button>
         </form>
 
         <template #footer>
             <p class="text-white">
-                You do not have an account? <inertia-link :href="route('register')" class="font-bold hover:underline">Sign up!</inertia-link>
+                ¿No tienes cuenta? <inertia-link :href="route('register')" class="font-bold hover:underline">¡Inscribirse!</inertia-link>
             </p>
         </template>
     </auth-layout>

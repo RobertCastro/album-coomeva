@@ -2,8 +2,8 @@
     <auth-layout>
         <template #toolbar>
             <section>
-                <h3 class="font-bold text-2xl">Welcome</h3>
-                <p class="text-gray-600 pt-2">Use the form to recover your password</p>
+                <h3 class="font-bold text-2xl">Bienvenido</h3>
+                <p class="text-gray-600 pt-2">Utilice el formulario para recuperar su contraseña</p>
             </section>
         </template>
 
@@ -16,7 +16,7 @@
                     class="block text-gray-700 text-sm font-bold mb-2 ml-3"
                     for="email"
                 >
-                    Enter your email
+                    Ingrese su email
                 </label>
                 <input
                     v-model="form.email"
@@ -29,12 +29,12 @@
                 class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200"
                 type="submit"
             >
-                Recover my password
+                Recuperar mi contraseña
             </button>
         </form>
 
         <template #footer>
-            <p class="text-white">Have you remembered your password? <inertia-link :href="route('login')" class="font-bold hover:underline">Log in into your account!</inertia-link></p>
+            <p class="text-white">¿Has recordado tu contraseña? <inertia-link :href="route('login')" class="font-bold hover:underline">¡Inicie sesión en su cuenta!</inertia-link></p>
         </template>
     </auth-layout>
 </template>

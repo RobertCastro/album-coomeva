@@ -2,8 +2,8 @@
     <auth-layout>
         <template #toolbar>
             <section>
-                <h3 class="font-bold text-2xl">Welcome</h3>
-                <p class="text-gray-600 pt-2">creat your account</p>
+                <h3 class="font-bold text-2xl">Bienvenido</h3>
+                <p class="text-gray-600 pt-2">Crea cuenta</p>
             </section>
         </template>
 
@@ -16,7 +16,7 @@
                     class="block text-gray-700 text-sm font-bold mb-2 ml-3"
                     for="name"
                 >
-                    Name
+                    Nombre
                 </label>
                 <input
                     v-model="form.name"
@@ -31,7 +31,7 @@
                     class="block text-gray-700 text-sm font-bold mb-2 ml-3"
                     for="email"
                 >
-                    Email
+                    Correo electrónico
                 </label>
                 <input
                     v-model="form.email"
@@ -46,7 +46,7 @@
                     class="block text-gray-700 text-sm font-bold mb-2 ml-3"
                     for="password"
                 >
-                    Password
+                    Contraseña
                 </label>
                 <input
                     v-model="form.password"
@@ -62,7 +62,7 @@
                     class="block text-gray-700 text-sm font-bold mb-2 ml-3"
                     for="password_confirmation"
                 >
-                    Confirm password
+                    Confirmar contraseña
                 </label>
                 <input
                     v-model="form.password_confirmation"
@@ -76,13 +76,13 @@
                 class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200"
                 type="submit"
             >
-                Create Account
+                Crear cuenta
             </button>
         </form>
 
         <template #footer>
             <p class="text-white">
-                Do you already have an account? <inertia-link :href="route('login')" class="font-bold hover:underline">Sign in!</inertia-link>
+                Ya tienes una cuenta? <inertia-link :href="route('login')" class="font-bold hover:underline">¡Registrarse!</inertia-link>
             </p>
         </template>
     </auth-layout>
