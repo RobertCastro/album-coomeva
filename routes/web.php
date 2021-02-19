@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\DataController;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
@@ -27,7 +28,7 @@ Route::get('/', function () {
 Route::group(["middleware" => ['auth:sanctum', 'verified']], function () {
 
     Route::put("dashboard/{store}/restore", [StoreController::class, "restore"])->name("stores.restore");;
-    Route::resource("dashboard", StoreController::class);
+    Route::resource("dashboard", DataController::class)->except(["show"]);
     Route::get('dashboard/export/', [DataController::class, 'export'])->name("dashboard.export");
     Route::get('dashboard/affiliated/', [DataController::class, 'affiliated'])->name("dashboard.affiliated");
 
