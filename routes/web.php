@@ -3,6 +3,7 @@
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\CalendarController;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,8 @@ Route::group(["middleware" => ['auth:sanctum', 'verified']], function () {
     Route::get('dashboard/affiliated/', [DataController::class, 'affiliated'])->name("dashboard.affiliated");
 
     Route::resource("users", UsersController::class);
+
+    Route::resource("calendar", CalendarController::class);
     
 });
 
