@@ -1,13 +1,14 @@
 <template>
     <backend-layout>
-        <h1>Calendar</h1>
+        <Calendar />
      </backend-layout>
 </template>
 
 <script>
 import BackendLayout from "@/Layouts/BackendLayout";
+import Calendar from "../../Components/Elements/Calendar";
 export default {
-    name: "Calendar",
-    components: {BackendLayout},
+    // name: "Calendar",
+    components: {BackendLayout, Calendar}
 }
 </script>
