@@ -42,7 +42,7 @@
 
                     <div class="bg-gray-50 px-4 py-4 sm:px-6 sm:flex sm:flex-row-reverse">
                         <button 
-                        @click.prevent="store()"
+                        @click.prevent="store(form)"
                         :type="button"
                         class="inline-flex justify-center w-full border border-teal-500 text-white bg-gray-700 rounded-md px-4"
                         >Guardar</button>
@@ -77,6 +77,9 @@ export default {
     methods: {
         CloseModal() {
             this.$emit('CloseModal');
+        },
+        store(form) {
+            this.$emit('saveAppt', form);
         }
     }
     

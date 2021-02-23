@@ -1,7 +1,7 @@
 <template>
     <backend-layout>
         <Calendar @dateClick="dateClick" />
-        <ModalCalendar v-if="ShowModal" :form="NewEvent" @CloseModal="CloseModal" />
+        <ModalCalendar v-if="ShowModal" :form="NewEvent" @CloseModal="CloseModal" @saveAppt="saveAppt" />
      </backend-layout>
 </template>
 
@@ -34,6 +34,9 @@ export default {
             this.NewEvent.date = dateAndTime[0];
             this.NewEvent.hour = dateAndTime[1];
             return;
+        },
+        saveAppt(form) {
+            
         }
     }
 }

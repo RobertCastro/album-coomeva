@@ -4,6 +4,7 @@ use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\GameController;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,7 @@ Route::group(["middleware" => ['auth:sanctum', 'verified']], function () {
     Route::resource("users", UsersController::class);
 
     Route::resource("calendar", CalendarController::class);
+    Route::resource("games", GameController::class);
     
 });
 
